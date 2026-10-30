@@ -45,5 +45,5 @@ Each plot is processed by process_plot(), which calls the functions below.
 
 # Citation
 
-If you use this code, please cite the article above and this repository.
+If you use this code, please cite the article above and this repository (DOI: 10.5281/zenodo.23806609).
 
