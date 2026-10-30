@@ -17,10 +17,18 @@ In the paper, ground points were classified with cloth simulation filtering (lid
 
 The plot ID is taken from the file name as the text before the first underscore (e.g. B01_scan.laz → B01).
 
-2. Tree table (CSV, semicolon-separated, decimal comma) with one row per segmented tree and at least these columns:
-Plot:	Plot ID, matching the point cloud file names; est.height:	Estimated tree height (m)
+2. Tree table ((dataWWBR_30m_plots.csv, included; semicolon-separated, decimal comma). One row per tree segmented with treeX within 30 m of the plot centre (5,660 trees in 39 plots):
 
-The tallest tree in each plot sets the height of the analysis cylinder.
+Column	    Description
+Plot	      Plot ID, matching the point cloud file names
+id	        Tree ID within the plot
+x, y, z	    Position of the stem base (m) in the local coordinate system of the point cloud, with the origin at the plot centre
+nPoints	     Number of points of the segmented tree
+dbh	        Diameter at breast height (cm)
+est.height	Estimated tree height (m)
+
+The script uses Plot and est.height: the tallest tree in each plot sets the height of the analysis cylinder. The number of large-diameter trees used in the paper is the number of trees with dbh ≥ 30 cm per plot.
+
 The point clouds are not included in this repository. [They are available from the corresponding author upon reasonable request.]
 
 # Method
